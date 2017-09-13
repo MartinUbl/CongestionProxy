@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <memory>
 #include <mutex>
 
 // singleton template class

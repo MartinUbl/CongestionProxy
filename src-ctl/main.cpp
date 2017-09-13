@@ -38,7 +38,7 @@
 // TODO: move these values to config
 
 // daemon address
-constexpr char* DaemonAddr = "127.0.0.1";
+constexpr const char* DaemonAddr = "127.0.0.1";
 // daemon port
 constexpr uint16_t DaemonPort = 9967;
 

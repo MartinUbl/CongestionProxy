@@ -14,9 +14,9 @@ constexpr char ConfigCommentCharacter = '#';
 constexpr char ConfigKeyValueSplitCharacter = '=';
 
 // default config local path - first priority
-constexpr char* ConfigDefaultLocalFilename = "congestion-proxy.conf";
+constexpr const char* ConfigDefaultLocalFilename = "congestion-proxy.conf";
 // default system config path - second priority
-constexpr char* ConfigDefaultSystemFilename = "/etc/congestion-proxy.conf";
+constexpr const char* ConfigDefaultSystemFilename = "/etc/congestion-proxy.conf";
 
 // all config keys present in config
 enum class ConfigKeys

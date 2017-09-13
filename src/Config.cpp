@@ -27,13 +27,23 @@ static bool probe_file_existence(const char* path)
     // use C-style approach, since it's faster
 
     FILE* f;
-    errno_t err = fopen_s(&f, path, "r");
+#ifdef _WIN32
+    int err = fopen_s(&f, path, "r");
 
     if (f && err == 0)
     {
         fclose(f);
         return true;
     }
+#else
+    f = fopen(path, "r");
+
+    if (f)
+    {
+        fclose(f);
+        return true;
+    }
+#endif
 
     return false;
 }

@@ -9,11 +9,11 @@
 #include <queue>
 
 // config string formatter for message count
-constexpr char* StrMessageCountFormatter = "$N";
+constexpr const char* StrMessageCountFormatter = "$N";
 // config string formatter for recipient address
-constexpr char* StrRecipientFormatter = "$R";
+constexpr const char* StrRecipientFormatter = "$R";
 // config string formatter for message parameter
-constexpr char* StrMessageFormatter = "$M";
+constexpr const char* StrMessageFormatter = "$M";
 
 // class representing single recipient queue
 class Queue

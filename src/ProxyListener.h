@@ -52,7 +52,7 @@
 #endif
 
 // universal ("any") bind address 
-constexpr char* BindAnyAddr = "0.0.0.0";
+constexpr const char* BindAnyAddr = "0.0.0.0";
 
 // size of input buffer in bytes
 constexpr size_t InBufferSize = 2048; /* 2kB */
