@@ -1,0 +1,37 @@
+################################
+# Congestion Proxy config file #
+################################
+
+### General config
+
+# proxy socket IP address
+proxy-bind=127.0.0.1
+
+# proxy socket port
+proxy-port=9967
+
+# message rate interval for measuring congestion
+message-rate-interval=60
+
+# maximum number of messages per interval
+message-rate-limit=10
+
+# proxy command (for either normal non-grouped messages and grouped ones)
+# $R = recipient, $M = message
+proxy-command=/usr/local/bin/my_send_script $R $M
+
+### Congestion phase config
+
+# delay for sending the grouped message in seconds
+grouping-delay=120
+
+# message to be sent during congestion
+# $N = number of events that occurred (messages that was grouped)
+congestion-message=This is a grouped message of $N messages
+
+# keywords for mass message, enclosed in queues, separated by commas
+# the queue will then count every occurence in input messages and append to
+# the message as "Grouped message, keyword1: 10, keyword2: 15"
+# - case sensitive, also note the order - more specific before lesser ones
+# ("fatal error" before "error", ..)
+message-keywords="OK","WARNING","FATAL ERROR","ERROR"
