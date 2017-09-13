@@ -8,6 +8,8 @@
 #include "ProxyListener.h"
 #include "QueueManager.h"
 
+#include <cstring>
+
 ProxyListener::ProxyListener(std::string bindTo, uint16_t bindPort) : m_bindAddr(bindTo), m_bindPort(bindPort)
 {
     //
@@ -113,7 +115,7 @@ void ProxyListener::_Run()
     SOCK resSocket;
     struct timeval tv;
     sockaddr_in inaddr;
-    int addrlen;
+    ADDRLEN addrlen;
 
     char inbuffer[InBufferSize];
     std::set<SOCK> toremove;

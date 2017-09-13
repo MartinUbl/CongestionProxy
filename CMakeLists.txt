@@ -19,7 +19,7 @@ FILE(GLOB_RECURSE srcfiles src/*.h src/*.cpp src/*.c)
 ADD_EXECUTABLE(congestion-proxy ${srcfiles})
 
 INSTALL(TARGETS congestion-proxy DESTINATION /usr/sbin)
-INSTALL(FILES etc/congestion-proxy.conf.dist.in DESTINATION /etc/congestion-proxy.conf)
+INSTALL(FILES etc/congestion-proxy.conf.dist.in DESTINATION /etc/)
 INSTALL(FILES etc/congestion-proxy.service DESTINATION /etc/systemd/system/)
 INSTALL(CODE "execute_process(COMMAND systemctl enable /etc/systemd/system/congestion-proxy.service)")
 
