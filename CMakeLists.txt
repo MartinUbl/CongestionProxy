@@ -9,7 +9,7 @@ SET(CPACK_PACKAGE_VERSION "1.0-dev")
 INCLUDE(CPack)
 
 IF(UNIX)
-	ADD_DEFINITIONS(--std=c++11 -g)
+	ADD_DEFINITIONS(--std=c++14 -g)
 ENDIF()
 
 ## Prepare congestion-proxy project
