@@ -1,4 +1,4 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.0)
 
 PROJECT(CongestionProxy)
 
@@ -9,7 +9,7 @@ SET(CPACK_PACKAGE_VERSION "1.0-dev")
 INCLUDE(CPack)
 
 IF(UNIX)
-	ADD_DEFINITIONS(-std=c++11 -g)
+	ADD_DEFINITIONS(--std=c++11 -g)
 ENDIF()
 
 ## Prepare congestion-proxy project
